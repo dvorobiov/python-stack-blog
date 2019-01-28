@@ -21,7 +21,7 @@ I will show in the article how every of those frameworks matches the idea of sta
 
 Let's start with the ETL part - get the data from different sources, transform, change it to extract interesting information, insights, and, finally, load, store the results in a storage.
 
-A simplest scenario we can see at companies is that there is a main source of data - some SQL database, there are some additional sources like Google analytics, external services. The management ask for weekly reports for sales. The simplest way to do is to setup a service that will query data from those sources, from the replica of the main database, calculate, store, build a report, and send it daily to the management. The service can be triggered by cron-like software (e.g. [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) or [Nomad](https://www.nomadproject.io/).
+A simplest scenario we can see at companies is that there is a main source of data - some SQL database, there are some additional sources like Google analytics, external services. The management ask for weekly reports for sales. The simplest way to do is to setup a service that will query data from those sources, from the replica of the main database, calculate, store, build a report, and send it daily to the management. The service can be triggered by modern cron-like software like [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) or [Nomad](https://www.nomadproject.io/).
 
 Later, there will be more reports, more dashboards. More complexity comes with it: jobs will have many steps, depend on each other, they will fail, the engineers need to restart them. All in all, nightmare to touch.
 
