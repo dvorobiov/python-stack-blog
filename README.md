@@ -2,14 +2,14 @@
 
 Created: Jan 15, 2019 3:02 PM
 
-Being [data driven or data informed]([https://hackernoon.com/why-you-should-be-data-informed-and-not-data-driven-76079d187989](https://hackernoon.com/why-you-should-be-data-informed-and-not-data-driven-76079d187989)) is seen as a competitive advantage or even crucial foundation for a company that want to survive and thrive in the modern business. It is true for small businesses and startups - most of them want to benefit from data they have - their needs can vary: dashboards for marketing people, reports and analytics to make informed decisions, tapping into Machine Learning to augment their product.
+Being [data driven or data informed](https://hackernoon.com/why-you-should-be-data-informed-and-not-data-driven-76079d187989) is seen as a competitive advantage or even crucial foundation for a company that want to survive and thrive in the modern business. It is true for small businesses and startups - most of them want to benefit from data they have - their needs can vary: dashboards for marketing people, reports and analytics to make informed decisions, tapping into Machine Learning to augment their product.
 
 We should approach building data systems the same way we build software products in general nowadays - being flexible, nimble, progressing in iterations with regular review sessions and corrections. In the article I want to introduce a number of tools, Python focused, that I believe can help to iteratively grow data pipeline in the context of small companies, where there is often a single data engineer or scientist. Those tools are
 
-- [Airflow]([https://airflow.apache.org/](https://airflow.apache.org/)) for building data pipelines,
-- [Dask]([https://github.com/dask/dask](https://github.com/dask/dask)) parallel computing,
-- [Dash]([https://plot.ly/products/dash/](https://plot.ly/products/dash/)) for analytical web applications, dashboards, and
-- [Snowflake]([https://www.snowflake.com/](https://www.snowflake.com/)) as a data warehouse.
+- [Airflow](https://airflow.apache.org/) for building data pipelines,
+- [Dask](https://github.com/dask/dask) parallel computing,
+- [Dash](https://plot.ly/products/dash/) for analytical web applications, dashboards, and
+- [Snowflake](https://www.snowflake.com/) as a data warehouse.
 
 ![](logos.png)
 
@@ -21,7 +21,7 @@ I will show in the article how every of those frameworks matches the idea of sta
 
 Let's start with the ETL part - get the data from different sources, transform, change it to extract interesting information, insights, and, finally, load, store the results in a storage.
 
-A simplest scenario we can see at companies is that there is a main source of data - some SQL database, there are some additional sources like Google analytics, external services. The management ask for weekly reports for sales. The simplest way to do is to setup a service that will query data from those sources, from the replica of the main database, calculate, store, build a report, and send it daily to the management. The service can be triggered by cron-like software (e.g. [CronJob]([https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)) or [Nomad]([https://www.nomadproject.io/](https://www.nomadproject.io/)).
+A simplest scenario we can see at companies is that there is a main source of data - some SQL database, there are some additional sources like Google analytics, external services. The management ask for weekly reports for sales. The simplest way to do is to setup a service that will query data from those sources, from the replica of the main database, calculate, store, build a report, and send it daily to the management. The service can be triggered by cron-like software (e.g. [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) or [Nomad](https://www.nomadproject.io/).
 
 Later, there will be more reports, more dashboards. More complexity comes with it: jobs will have many steps, depend on each other, they will fail, the engineers need to restart them. All in all, nightmare to touch.
 
@@ -65,11 +65,11 @@ A very important benefit for a small company that focuses on speed of delivery a
 
 ## Visualise and Interact
 
-Different departments at the company want to understand data, see the trends. Visualising data is a key aspect on turning statistical numbers into actions.Therefore, data scientists must be ready to build dashboards and charts. Static graphs are a good start, but you may want or need to make more interactive dynamic graphs. Great [dynamic visualisation]([https://vimeo.com/66085662](https://vimeo.com/66085662)) can be an important thinking tool, and is both [art and science]([https://www.edwardtufte.com/tufte/books_vdqi](https://www.edwardtufte.com/tufte/books_vdqi)). 
+Different departments at the company want to understand data, see the trends. Visualising data is a key aspect on turning statistical numbers into actions.Therefore, data scientists must be ready to build dashboards and charts. Static graphs are a good start, but you may want or need to make more interactive dynamic graphs. Great [dynamic visualisation](https://vimeo.com/66085662) can be an important thinking tool, and is both [art and science](https://www.edwardtufte.com/tufte/books_vdqi). 
 
-[Dash]([https://plot.ly/products/dash/](https://plot.ly/products/dash/)) and [Bokeh]([https://bokeh.pydata.org/en/latest/](https://bokeh.pydata.org/en/latest/)) are two Python alternatives for building interactive analytical dashboards. Dash is based on plotly and it makes it flexible and powerful. More, Dash is based on very popular React.js on the front end, therefore it is easy to extend with new components. Data scientists can define HTML with Python, utilise markdown. 
+[Dash](https://plot.ly/products/dash/) and [Bokeh](https://bokeh.pydata.org/en/latest/) are two Python alternatives for building interactive analytical dashboards. Dash is based on plotly and it makes it flexible and powerful. More, Dash is based on very popular React.js on the front end, therefore it is easy to extend with new components. Data scientists can define HTML with Python, utilise markdown. 
 
-Dash provides functionality to make interactive applications, embraces reactive programming (being reactive is [considered great]([https://medium.com/data-engineering/reactive-machine-learning-3035b83d18e9](https://medium.com/data-engineering/reactive-machine-learning-3035b83d18e9)) nowadays) so it can update the chart based on user input, moving sliders, etc. 
+Dash provides functionality to make interactive applications, embraces reactive programming (being reactive is [considered great](https://medium.com/data-engineering/reactive-machine-learning-3035b83d18e9) nowadays) so it can update the chart based on user input, moving sliders, etc. 
 
 Dash uses Flask framework under the hood, therefore it is deployed as a web application. Plotly, the company behind Dash, also offers Dash Deployment Server, a commercial product for deploying Dash apps on popular cloud providers, and this may remove some operational work from your engineers.
 
@@ -81,7 +81,7 @@ There are solid frameworks your company can start adopting like Hadoop or Spark,
 
 Dask provides the dashboards that allows to provide current progress, resources consumption, there is also a profiler to learn what lines of code take more time to compute.
 
-What about deep learning? I am not sure if it's feasible and I did not try it, but there are ways to run [Tensorflow]([http://matthewrocklin.com/blog/work/2017/02/11/dask-tensorflow](http://matthewrocklin.com/blog/work/2017/02/11/dask-tensorflow)) and PyTorch on Dask. There is (discussion)[[https://github.com/dask/dask-ml/issues/281](https://github.com/dask/dask-ml/issues/281)] about using Dask for deep learning tasks. Personally my first choice to empower my deep learning work while staying within Jupyter notebook and not dealing with setting up on AWS would be services like [Paperspace]([https://www.paperspace.com](https://www.paperspace.com/)) or [Floydhub]([https://www.floydhub.com/](https://www.floydhub.com/)).
+What about deep learning? I am not sure if it's feasible and I did not try it, but there are ways to run [Tensorflow](http://matthewrocklin.com/blog/work/2017/02/11/dask-tensorflow) and PyTorch on Dask. There was [discussion](https://github.com/dask/dask-ml/issues/281) about using Dask for deep learning tasks. Personally, my first choice to empower my deep learning work while staying within Jupyter notebook and not dealing with setting up on AWS would be services like [Paperspace](https://www.paperspace.com/) or [Floydhub](https://www.floydhub.com/).
 
 There is also a possibility to integrate Airflow and Dask by using DaskExecutor that helps to run Airflow tasks on a Dask cluster. 
 
@@ -95,14 +95,14 @@ Let's look at a well established data system with model deployment pipeline and 
 
 **Data Collection System** - this can include HTTP clients, other databases, queue systems. If you want to stay within Python ecosystem it may be pretty comformable and you will find a lot of options to pick from, f.e. Flask for APIs, SQLAlchemy  for database access. 
 
-If you have data streaming component before embracing the power of Apache Flink, Spark Streaming etc. you may have a look at [Faust]([https://faust.readthedocs.io/en/latest/](https://faust.readthedocs.io/en/latest/)). The latter uses asyncio module for high-performance asynchronous I/O. Faust is used at the company Robinhood to build high performance distributed systems and real-time data pipelines that process billions of events every day.  Data Collection System is the first place where you may start using DAGs and scheduling therefore it's an obvious candidate to use Airflow. 
+If you have data streaming component before embracing the power of Apache Flink, Spark Streaming etc. you may have a look at [Faust](https://faust.readthedocs.io/en/latest/). The latter uses asyncio module for high-performance asynchronous I/O. Faust is used at the company Robinhood to build high performance distributed systems and real-time data pipelines that process billions of events every day.  Data Collection System is the first place where you may start using DAGs and scheduling therefore it's an obvious candidate to use Airflow. 
 
 **Model Learning Pipeline**, **Model Evaluation Pipeline**, and **Model Publishing Pipeline** are other places to utilise Apache Airflow. 
 
 **Raw Data Storage** and **Data Warehouse** are the components where Snowflake can be used. 
 
-**Serving Platform** is the services you use to serve your model, provide access to data, potentially with  [materialized views pattern]([https://docs.microsoft.com/en-us/azure/architecture/patterns/materialized-view](https://docs.microsoft.com/en-us/azure/architecture/patterns/materialized-view)). Here you stick with Flask, Django, Pyramid, etc.
+**Serving Platform** is the services you use to serve your model, provide access to data, potentially with  [materialized views pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/materialized-view). Here you stick with Flask, Django, Pyramid, etc.
 
-No language and no tool are perfect, and Python can be criticised for poor performance, for the dynamic typing. Actually, the latter can be sort of addressed with the [typing module]([https://docs.python.org/3/library/typing.html](https://docs.python.org/3/library/typing.html)). We used it on a recent project, together with [data classes]([https://docs.python.org/3/library/dataclasses.html](https://docs.python.org/3/library/dataclasses.html)), and they added some points to maintainability and clarity of the code.
+No language and no tool are perfect, and Python can be criticised for poor performance, for the dynamic typing. Actually, the latter can be sort of addressed with the [typing module](https://docs.python.org/3/library/typing.html). We used it on a recent project, together with [data classes](https://docs.python.org/3/library/dataclasses.html), and they added some points to maintainability and clarity of the code.
 
-Happy Exploring and Hacking!
+Happy Exploring and Merry Hacking!
