@@ -39,6 +39,10 @@ Initial setup is not easy, and the tool has some learning curve - the feedback I
 
 Airflow supports the functionality mentioned above. Tasks, tasks dependencies, and workflows, represented as DAGs are defined programmatically in Python. This allows more powerful and flexible pipelines, dynamic workflows and variables comparing to, say, declaring pipelines with XML or YAML.
 
+An Example of Airflow's DAG:
+
+![Example of Airflow DAG](dag.png)
+
 Airflow can be used for a variety of tasks: building ETLs, triggering jobs, computation tasks. The framework scales well and is maintenance-friendly, since pipelines are defined in code and can be put in source control system.
 
 Talking about drawbacks of Airflow:
