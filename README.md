@@ -2,14 +2,14 @@
 
 Created: Jan 15, 2019 3:02 PM
 
-Being [data driven or data informed]([https://hackernoon.com/why-you-should-be-data-informed-and-not-data-driven-76079d187989](https://hackernoon.com/why-you-should-be-data-informed-and-not-data-driven-76079d187989)) is seen as a competitive advantage or even crucial foundation for a company that want to survive and thrive in the modern business. It is true for small businesses and startups - most of them want to benefit from data they have - their needs can vary: dashboards for marketing people, reports and analytics to make informed decisions, tapping into Machine Learning to augment their product.
+Being [data driven or data informed](https://hackernoon.com/why-you-should-be-data-informed-and-not-data-driven-76079d187989(https://hackernoon.com/why-you-should-be-data-informed-and-not-data-driven-76079d187989) is seen as a competitive advantage or even crucial foundation for a company that want to survive and thrive in the modern business. It is true for small businesses and startups - most of them want to benefit from data they have - their needs can vary: dashboards for marketing people, reports and analytics to make informed decisions, tapping into Machine Learning to augment their product.
 
 We should approach building data systems the same way we build software products in general nowadays - being flexible, nimble, progressing in iterations with regular review sessions and corrections. In the article I want to introduce a number of tools, Python focused, that I believe can help to iteratively grow data pipeline in the context of small companies, where there is often a single data engineer or scientist. Those tools are
 
-- [Airflow]([https://airflow.apache.org/](https://airflow.apache.org/)) for building data pipelines,
-- [Dask]([https://github.com/dask/dask](https://github.com/dask/dask)) parallel computing,
-- [Dash]([https://plot.ly/products/dash/](https://plot.ly/products/dash/)) for analytical web applications, dashboards, and
-- [Snowflake]([https://www.snowflake.com/](https://www.snowflake.com/)) as a data warehouse.
+- [Airflow](https://airflow.apache.org/)) for building data pipelines,
+- [Dask](https://github.com/dask/dask)) parallel computing,
+- [Dash](https://plot.ly/products/dash/)) for analytical web applications, dashboards, and
+- [Snowflake](https://www.snowflake.com/)) as a data warehouse.
 
 ![](logos.png)
 
