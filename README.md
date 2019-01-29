@@ -4,7 +4,15 @@ Created: Jan 15, 2019 3:02 PM
 
 Being [data driven or data informed](https://hackernoon.com/why-you-should-be-data-informed-and-not-data-driven-76079d187989) is seen as a competitive advantage or even crucial foundation for companies that want to survive and thrive in the modern business. It is true both for small businesses and startups - most of them want to benefit from the information they have - their needs can vary: dashboards for marketing people, reports and analytics to make informed decisions, tapping into Machine Learning to augment existing products.
 
-We should approach building data systems the same way we build software products in general nowadays - being flexible, nimble, progressing in iterations with regular review sessions and corrections. In the article I want to introduce a number of tools, Python focused, that I believe can help to iteratively grow data pipeline in the context of small companies, where there is often a single data engineer or scientist. Those tools are
+We should approach building data systems the same way we build software products in general nowadays - being flexible, nimble, lean, moving forward in small iterations with constant feedback and corrections. 
+
+What does "lean" mean? To have a lean mindset is to focus on delivering value to customers fast with less resources. It's an approach, a philosophy to run a company, build a technical vision, choose technologies. In our particular case I want to suggest the following principles:
+
+- Minimise time on operational and maintenance work. Pick tools that are easier to setup and maintain, prefer using third party hosted tools (SaaS).
+- Be pragmatic deciding on frameworks and libraries: do not choose new shiny unstable tools, do not build your own frameworks, if they are not your core competence, do not choose prematurely large complex software, better focus on your needs and requirements for the current year. Do not pick Hadoop if Airflow can deal well with processing your data.
+- Try to choose tools that are easier to learn, integrated with each other, written in the same language. This gives you and other engineers flexibility to quickly switch to a priority work without wasting time on learning another language. 
+
+In the article I want to introduce a number of tools, Python focused, that I believe can help to iteratively grow data pipeline in the context of small companies, where there is often a single data engineer or scientist. Those tools are
 
 - [Airflow](https://airflow.apache.org/) for building data pipelines,
 - [Dask](https://github.com/dask/dask) parallel computing,
