@@ -103,7 +103,7 @@ Besides the fact that Python is a top language for data science, it has rich and
 
 Let's look at a well established data system with model deployment pipeline and find the parts our stack can be used.
 
-![](data_system.png)
+![](datasystem.png)
 
 **Data Collection System** - this can include HTTP clients, other databases, queue systems. If you want to stay within Python ecosystem it may be pretty comformable and you will find a lot of options to pick from, f.e. Flask for APIs, SQLAlchemy  for database access. 
 
