@@ -103,7 +103,7 @@ Besides the fact that Python is a top language for data science, it has rich and
 
 Let's look at a well established data system with model deployment pipeline and find the parts our stack can be used.
 
-![](data_process.png)
+![](data_system.png)
 
 **Data Collection System** - this can include HTTP clients, other databases, queue systems. If you want to stay within Python ecosystem it may be pretty comformable and you will find a lot of options to pick from, f.e. Flask for APIs, SQLAlchemy  for database access. 
 
@@ -111,7 +111,7 @@ If you have data streaming component before embracing the power of Apache Flink,
 
 **Model Learning Pipeline**, **Model Evaluation Pipeline**, and **Model Publishing Pipeline** are other places to utilise Apache Airflow. 
 
-**Raw Data Storage** that is used for storing unprocessed events from the data sources and **Data Warehouse** where tranformed data is stored for reporting, BI, and data science work are the components where Snowflake can certainly be used. Later, the company can switch to using distributed filesystems like S3, HTFS for Raw Data Storage.
+**Raw Data Lake** that is used for storing unprocessed events from the data sources and **Data Warehouse** where tranformed data is stored for reporting, BI, and data science work are the components where Snowflake can certainly be used. Later, the company can switch to using distributed filesystems like S3, HTFS for Raw Data Storage.
 
 **Serving Platform** is the services you use to serve your model, provide access to data, potentially with  [materialized views pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/materialized-view). Here you stick with Flask, Django, Pyramid, etc.
 
