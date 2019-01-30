@@ -21,9 +21,9 @@ In the article I want to introduce a number of tools, Python focused, that I bel
 
 ![](logos.png)
 
-The cool abbreviation for the stack is **ADDS**. Not every of them is required for a particular company, the idea is that they cover the areas typically important in everyday work of data scientists. I would like to warn, I am not selling this approach and tools as the single best way, rather than as a reasonable option to build data systems on modern solid Python tool set.
+Not every of them is required for a particular company, the idea is that they cover the areas typically important in everyday work of data scientists. I would like to warn, I am not selling this approach and tools as the single best way, rather than as a reasonable option to build data systems on modern solid Python tool set.
 
-I will show in the article how every of those frameworks matches the idea of staying lean and move iteratively.
+In the article I ll try to elaborate how every of those pieces matches the idea of focusing on fast value delivery minimizing operational costs.
 
 ## Structure and Schedule
 
@@ -115,6 +115,6 @@ If you have data streaming component before embracing the power of Apache Flink,
 
 **Serving Platform** is the services you use to serve your model, provide access to data, potentially with  [materialized views pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/materialized-view). Here you stick with Flask, Django, Pyramid, etc.
 
-No language and no tool are perfect, and Python can be criticised for poor performance, for the dynamic typing. Actually, the latter can be sort of addressed with the [typing module](https://docs.python.org/3/library/typing.html). We used it on a recent project, together with [data classes](https://docs.python.org/3/library/dataclasses.html), and they added some points to maintainability and clarity of the code.
+As you can see, data team can effectively stay within Python environment, and build effient lean data systems. In latest Python versions there is functionality that can improve clarity and maintenace of code as well, just have a look at [typing module](https://docs.python.org/3/library/typing.html)and [data classes](https://docs.python.org/3/library/dataclasses.html).
 
 Happy Exploring and Merry Hacking!
