@@ -115,6 +115,6 @@ If you have data streaming component before embracing the power of Apache Flink,
 
 **Serving Platform** is the services you use to serve your model, provide access to data, potentially with  [materialized views pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/materialized-view). Here you stick with Flask, Django, Pyramid, etc.
 
-As you can see, data team can effectively stay within Python environment, and build effient lean data systems. In latest Python versions there is functionality that can improve clarity and maintenace of code as well, just have a look at [typing module](https://docs.python.org/3/library/typing.html)and [data classes](https://docs.python.org/3/library/dataclasses.html).
+As you can see, data team can effectively stay within Python environment, and build effient lean data systems. In latest Python versions there is functionality that can improve clarity and maintenace of code as well, just have a look at [typing module](https://docs.python.org/3/library/typing.html) and [data classes](https://docs.python.org/3/library/dataclasses.html).
 
 Happy Exploring and Merry Hacking!
