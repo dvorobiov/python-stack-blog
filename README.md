@@ -48,7 +48,7 @@ You need a tool that will ease the pain in:
 - monitoring,
 - scaling.
 
-### Here, the Apache Airflow enters the stage. 
+#### Here, the Apache Airflow enters the stage. 
 
 This tool allows to define tasks programmatically, schedule them, set dependencies between them, retry strategies. It also provides UI and monitoring tools.
 
@@ -63,7 +63,7 @@ An Example of Airflow's DAG:
 
 You can use Airflow for a variety of tasks: building ETLs, triggering jobs, computation tasks. The framework scales well and is maintenance-friendly, since pipelines are defined in code and can be put in source control system.
 
-###A few drawbacks of Airflow:
+#### A few drawbacks of Airflow:
 
 - Setup is not easy, but it depends on the experience of engineers,
 - There is a learning curve,
@@ -91,7 +91,7 @@ Different departments at the company want to understand data, see the trends. Da
 
 Static graphs are a good start, but you may want or need to make more interactive dynamic graphs. Great [dynamic visualisation](https://vimeo.com/66085662) can be an important thinking tool, and is both [art and science](https://www.edwardtufte.com/tufte/books_vdqi). 
 
-### [Dash](https://plot.ly/products/dash/) and [Bokeh](https://bokeh.pydata.org/en/latest/) are two Python alternatives for building interactive analytical dashboards. 
+#### [Dash](https://plot.ly/products/dash/) and [Bokeh](https://bokeh.pydata.org/en/latest/) are two Python alternatives for building interactive analytical dashboards. 
 
 Dash is based on Plotly, and it makes it flexible and powerful. In addition, Dash is powered by very popular React.js on the front end, therefore it is easy to extend with new components. Data scientists can define HTML with Python, utilize markdown. 
 
@@ -107,7 +107,7 @@ First of all, a piece of good advice: if you can stay on a single machine, you'd
 
 There are solid frameworks (like Hadoop or Apache Spark) that your company can start adopting, but note that it may be not feasible for your small team to setup and operate these large and powerful frameworks. 
 
-### You need a framework that fits between the big frameworks and running code on a single machine. 
+#### You need a framework that fits between the big frameworks and running code on a single machine. 
 
 Also, those tools usually mean that data scientists need to completely rewrite scripts they used to run on their machines into other languages or libraries. 
 
