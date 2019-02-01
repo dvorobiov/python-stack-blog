@@ -19,7 +19,7 @@ In our case I'd like to suggest the three principles:
 In the article I want to introduce a number of tools, Python focused. I believe they can help to iteratively grow data pipeline in the context of small companies, where there is often a single data engineer or scientist. Those tools are
 
 - [Airflow](https://airflow.apache.org/) for building data pipelines,
-- [Dask](https://github.com/dask/dask) parallel computing,
+- [Dask](https://github.com/dask/dask) for parallel computing,
 - [Dash](https://plot.ly/products/dash/) for analytical web applications, dashboards, and
 - [Snowflake](https://www.snowflake.com/) as a data warehouse.
 
